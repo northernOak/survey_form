@@ -1,8 +1,49 @@
-<html>
+<html lang="en">
 
-<h1 id="title">Living in Michigan Survey<h1>
+  <head>
+  </head>
+
+  <body>
+      <h1 id="title">Living in Michigan Survey<h1>
+      <p id="description">This is a survey on living in the State of Michigan</p>
+      <form id="survey-form">
+        <label id="name-label">Name:</label>
+        <input type="text" name="name" id="name" required placeholder="First Name"></input><br>
+        <label id="email-label">Email:</label>
+        <input type="email" name="name" id="email" required placeholder="Email"></input><br>
+        <label id="number-label">Number:</label>
+        <input type="number" name="name" id="number" min="0" max="10" required placeholder="Satisfaction Level" ></input><br>
+
+      <select name="peninsula" id="dropdown">
+        <option value="lower-peninsula">Lower Peninsula</option>
+        <option value="upper-peninsula">Upper Peninsula</option>
+      </select>
+
+        <br>
+        <p> Where do you live?</p>
+        <input type="radio" id="city" name="area" value="city">
+        <label for="city">City</label><br>
+        <input type="radio" id="suburb" name="area" value="suburb">
+        <label for="suburb">Suburb</label><br>
+        <input type="radio" id="rural" name="area" value="rural">
+        <label for="rural">Rural</label>
+        <br>
+
+        <p> Which of the following do you feel needs improvment?</p>
+        <input type="checkbox" id="transit" name="improvements" value="transit">
+        <label for="transit"> Mass Transit</label><br>
+        <input type="checkbox" id="roads" name="improvements" value="roads">
+        <label for="roads">Roads</label><br>
+        <input type="checkbox" id="urban" name="improvements" value="urban">
+        <label for="urban">Urban Development</label><br>
+        <input type="checkbox" id="wages" name="improvements" value="wages">
+        <label for="wages">Wages</label><br>
 
 
-
+        <textarea placeholder="Additional Comments"></textarea>
+        <input type="submit" id="submit">
+      </form>
+      <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+   </body>
 
 </html>
