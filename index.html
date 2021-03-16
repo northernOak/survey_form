@@ -1,11 +1,49 @@
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    label {
+      font-size: 18px;
+      padding-bottom: 0px;
+      color: #444488;
+      font-weight: 600;
+    }
+    form {
+      background-image: linear-gradient(#ECECEC, #808080);
+    }
+
+    .radio-inline {
+      display: inline-block;
+      padding-left: 20px;
+      padding-right: 20px;
+
+    }
+
+    .questions{
+      color: #466d1d;
+      font-weight: 500;
+    }
+
+    .comments{
+      padding-top: 10px;
+    }
+
+    #description {
+      font-size: 20px;
+    }
+
+  </style>
   </head>
 
   <body>
       <h1 id="title">Living in Michigan Survey<h1>
-      <p id="description">This is a survey on living in the State of Michigan</p>
+      <p id="description">Help us by taking this quick survey</p>
       <form id="survey-form">
         <label id="name-label">Name:</label>
         <input type="text" name="name" id="name" required placeholder="First Name"></input><br>
@@ -14,13 +52,14 @@
         <label id="number-label">Number:</label>
         <input type="number" name="name" id="number" min="0" max="10" required placeholder="Satisfaction Level" ></input><br>
 
+        <p class="questions"><em>Which peninsula do you live in?</em></p>
       <select name="peninsula" id="dropdown">
         <option value="lower-peninsula">Lower Peninsula</option>
         <option value="upper-peninsula">Upper Peninsula</option>
       </select>
 
         <br>
-        <p> Where do you live?</p>
+        <p class="questions"><em>Where do you live?</em></p>
         <input type="radio" id="city" name="area" value="city">
         <label for="city">City</label><br>
         <input type="radio" id="suburb" name="area" value="suburb">
@@ -29,18 +68,18 @@
         <label for="rural">Rural</label>
         <br>
 
-        <p> Which of the following do you feel needs improvment?</p>
-        <input type="checkbox" id="transit" name="improvements" value="transit">
+        <p class="questions"><em>Which of the following do you feel needs improvment?</em></p>
+        <input type="checkbox" class="radio-inline" id="transit" name="improvements" value="transit">
         <label for="transit"> Mass Transit</label><br>
-        <input type="checkbox" id="roads" name="improvements" value="roads">
+        <input type="checkbox" class="radio-inline" id="roads" name="improvements" value="roads">
         <label for="roads">Roads</label><br>
-        <input type="checkbox" id="urban" name="improvements" value="urban">
+        <input type="checkbox" class="radio-inline" id="urban" name="improvements" value="urban">
         <label for="urban">Urban Development</label><br>
-        <input type="checkbox" id="wages" name="improvements" value="wages">
+        <input type="checkbox" class="radio-inline" id="wages" name="improvements" value="wages">
         <label for="wages">Wages</label><br>
 
 
-        <textarea placeholder="Additional Comments"></textarea>
+        <textarea class="comments" placeholder="Additional Comments"></textarea>
         <input type="submit" id="submit">
       </form>
       <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
